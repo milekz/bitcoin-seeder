@@ -5,7 +5,7 @@ RUN apt update  &&  \
     git clone https://github.com/sipa/bitcoin-seeder.git &&  \ 
     cd bitcoin-seeder &&  \
     make &&  \ 
-    cp dnsseed /usr/bin/   &&  \ 
+    #cp dnsseed /usr/bin/   &&  \ 
     #rm -rf /bitcoin-seeder  &&  \
     ln -s /bitcoin-seeder/dnsseed  /usr/bin/dnsseed && \
     apt purge -y build-essential && \
