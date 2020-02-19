@@ -6,7 +6,8 @@ RUN apt update  &&  \
     cd bitcoin-seeder &&  \
     make &&  \ 
     cp dnsseed /usr/bin/   &&  \ 
-    rm -rf /bitcoin-seeder  &&  \
+    #rm -rf /bitcoin-seeder  &&  \
+    ln -s /bitcoin-seeder/dnsseed  /usr/bin/dnsseed 
     apt purge -y build-essential && \
     apt -y autoremove && \
     rm -rf /var/lib/apt/lists/*
