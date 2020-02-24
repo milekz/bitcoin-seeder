@@ -6,5 +6,6 @@ RUN apk update && \
     git clone https://github.com/sipa/bitcoin-seeder.git && \
     cd bitcoin-seeder && \
     make && \
-    apk del g++ make git && \
-    ENV PATH="/bitcoin-seeder:${PATH}"
+    apk del g++ make git
+    
+ENV PATH="/bitcoin-seeder:${PATH}"
